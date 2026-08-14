@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Queue Dashboard - Aevora</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="logo">
+            🏥 Aevora
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="register.html">Register Patient</a>
+            <a href="queue.html">View Queue</a>
+            <a href="admin.html">Doctor Dashboard</a>
+            <a href="patient.html">
+    Patient Records
+</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Queue Dashboard -->
+    <main class="queue-page">
+
+        <div class="queue-heading">
+
+            <p class="small-heading">
+                LIVE QUEUE
+            </p>
+
+            <h1>
+                Patient Queue
+            </h1>
+
+            <p>
+                View the current hospital queue and patient status.
+            </p>
+
+        </div>
+
+
+        <!-- Statistics -->
+        <section class="queue-stats">
+
+            <div class="queue-stat-card">
+
+                <span class="stat-label">
+                    Currently Serving
+                </span>
+
+                <strong id="currentPatient">
+                    A-000
+                </strong>
+
+            </div>
+
+
+            <div class="queue-stat-card">
+
+                <span class="stat-label">
+                    Patients Waiting
+                </span>
+
+                <strong id="waitingCount">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="queue-stat-card">
+
+                <span class="stat-label">
+                    Average Wait
+                </span>
+
+                <strong>
+                    15 min
+                </strong>
+
+            </div>
+
+        </section>
+     <div class="department-filter">
+
+    <label for="queueDepartment">
+        Select Department
+    </label>
+
+    <select id="queueDepartment">
+
+        <option value="All">
+            All Departments
+        </option>
+
+        <option value="General Medicine">
+            General Medicine
+        </option>
+
+        <option value="Cardiology">
+            Cardiology
+        </option>
+
+        <option value="Dermatology">
+            Dermatology
+        </option>
+
+        <option value="Orthopedics">
+            Orthopedics
+        </option>
+
+        <option value="Neurology">
+            Neurology
+        </option>
+
+        <option value="Pediatrics">
+            Pediatrics
+        </option>
+
+    </select>
+
+</div>
+
+
+        <!-- Queue Table -->
+        <section class="queue-table-container">
+
+            <div class="table-header">
+
+                <h2>
+                    Waiting Patients
+                </h2>
+
+                <span class="live-indicator">
+                    ● Live
+                </span>
+
+            </div>
+
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Queue No.</th>
+                            <th>Patient</th>
+                            <th>Age</th>
+                            <th>Department</th>
+                            <th>Priority</th>
+                            <th>Status</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="queueTable">
+
+                        <!-- Patients will be added using JavaScript -->
+
+                        <tr>
+
+                            <td colspan="6" class="empty-message">
+                                No patients currently waiting.
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Aevora | Clinic Management System
+        </p>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

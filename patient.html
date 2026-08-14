@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Patient Records - Aevora</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🏥 Aevora
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="register.html">
+                Register Patient
+            </a>
+
+            <a href="queue.html">
+                View Queue
+            </a>
+
+            <a href="admin.html">
+                Doctor Dashboard
+            </a>
+
+            <a href="patient.html">
+                Patient Records
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- Patient Records -->
+
+    <main class="patient-record-page">
+
+
+        <div class="patient-record-heading">
+
+            <p class="small-heading">
+                PATIENT RECORDS
+            </p>
+
+            <h1>
+                Find Patient
+            </h1>
+
+            <p>
+                Search an existing patient using their
+                Aevora Patient ID.
+            </p>
+
+        </div>
+
+
+
+        <!-- Search -->
+
+        <section class="patient-search-card">
+
+            <label for="patientIdSearch">
+                Patient ID
+            </label>
+
+
+            <div class="patient-search-row">
+
+                <input
+                    type="text"
+                    id="patientIdSearch"
+                    placeholder="Example: AEV-0001"
+                >
+
+
+                <button
+                    id="searchPatientButton"
+                    class="doctor-primary-button"
+                >
+                    🔍 Search
+                </button>
+
+            </div>
+
+
+            <p id="searchMessage"></p>
+
+        </section>
+
+
+
+        <!-- Patient Information -->
+
+        <section
+            id="patientRecord"
+            class="patient-record-card"
+            style="display: none;"
+        >
+
+            <div class="record-header">
+
+                <div>
+
+                    <p class="small-heading">
+                        PATIENT FOUND
+                    </p>
+
+                    <h2 id="recordPatientName">
+                        —
+                    </h2>
+
+                </div>
+
+
+                <strong id="recordPatientId">
+                    AEV-0000
+                </strong>
+
+            </div>
+
+
+
+            <!-- Basic Information -->
+
+            <div class="record-information">
+
+                <div>
+
+                    <span>
+                        Patient ID
+                    </span>
+
+                    <strong id="recordId">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Age
+                    </span>
+
+                    <strong id="recordAge">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Gender
+                    </span>
+
+                    <strong id="recordGender">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Last Department
+                    </span>
+
+                    <strong id="recordDepartment">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Last Visit
+                    </span>
+
+                    <strong id="recordDate">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Reason -->
+
+            <div class="record-reason">
+
+                <span>
+                    Reason for Last Visit
+                </span>
+
+                <p id="recordReason">
+                    —
+                </p>
+
+            </div>
+
+
+
+            <!-- Prescription History -->
+
+            <div class="prescription-section">
+
+                <h2>
+                    Prescription History
+                </h2>
+
+
+                <div id="prescriptionHistory">
+
+                    <p class="empty-message">
+                        No prescriptions recorded.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Aevora | Clinic Management System
+        </p>
+
+    </footer>
+
+
+
+    <script src="js/patient.js"></script>
+
+</body>
+
+</html>

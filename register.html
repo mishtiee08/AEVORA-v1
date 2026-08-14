@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register Patient - Aevora</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+
+    <div class="logo">
+        🏥 Aevora
+    </div>
+
+    <div class="nav-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="register.html">
+            Register Patient
+        </a>
+
+        <a href="queue.html">
+            View Queue
+        </a>
+
+        <a href="admin.html">
+            Doctor Dashboard
+        </a>
+
+    </div>
+
+</nav>
+
+
+    <!-- Registration Section -->
+    <section class="registration-section">
+
+        <div class="registration-container">
+
+            <div class="registration-heading">
+
+                <p class="small-heading">
+                    PATIENT REGISTRATION
+                </p>
+
+                <h1>
+                    Register for a Queue
+                </h1>
+
+                <p>
+                    Enter the patient's details below to receive
+                    a queue number.
+                </p>
+
+            </div>
+
+
+            <!-- Registration Form -->
+            <form id="patientForm">
+
+                <!-- Name -->
+                <div class="form-group">
+
+                    <label for="patientName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="patientName"
+                        placeholder="Enter patient's full name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Age and Gender -->
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="patientAge">
+                            Age
+                        </label>
+
+                        <input
+                            type="number"
+                            id="patientAge"
+                            placeholder="Age"
+                            min="1"
+                            max="120"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="patientGender">
+                            Gender
+                        </label>
+
+                        <select id="patientGender" required>
+
+                            <option value="">
+                                Select Gender
+                            </option>
+
+                            <option value="Male">
+                                Male
+                            </option>
+
+                            <option value="Female">
+                                Female
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Department -->
+                <div class="form-group">
+
+                    <label for="department">
+                        Department
+                    </label>
+
+                    <select id="department" required>
+
+                        <option value="">
+                            Select Department
+                        </option>
+
+                        <option value="General Medicine">
+                            General Medicine
+                        </option>
+
+                        <option value="Cardiology">
+                            Cardiology
+                        </option>
+
+                        <option value="Neurology">
+                            Neurology
+                        </option>
+
+                        <option value="Orthopedics">
+                            Orthopedics
+                        </option>
+
+                        <option value="Pediatrics">
+                            Pediatrics
+                        </option>
+
+                        <option value="Dermatology">
+                            Dermatology
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Reason -->
+                <div class="form-group">
+
+                    <label for="reason">
+                        Reason for Visit
+                    </label>
+
+                    <textarea
+                        id="reason"
+                        placeholder="Briefly describe the reason for the visit"
+                        rows="4"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Priority -->
+                <div class="form-group">
+
+                    <label for="priority">
+                        Priority
+                    </label>
+
+                    <select id="priority" required>
+
+                        <option value="Normal">
+                            Normal
+                        </option>
+
+                        <option value="Emergency">
+                            Emergency
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Submit -->
+                <button
+                    type="submit"
+                    class="submit-button"
+                >
+                    Join Queue
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 Aevora | Clinic Management System
+        </p>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
